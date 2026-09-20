@@ -65,8 +65,16 @@
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=AkiroMusic&show_icons=true&hide_border=true&theme=tokyonight" alt="GitHub stats"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AkiroMusic&layout=compact&hide_border=true&theme=tokyonight&langs_count=8" alt="Top languages"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/stats-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/stats-light.svg" />
+  <img alt="AkiroMusic GitHub stats" height="165" src="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/stats-light.svg" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/langs-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/langs-light.svg" />
+  <img alt="AkiroMusic top languages" height="165" src="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/langs-light.svg" />
+</picture>
 
 <img height="180" src="https://streak-stats.demolab.com?user=AkiroMusic&hide_border=true&theme=tokyonight&locale=en" alt="GitHub streak"/>
 
