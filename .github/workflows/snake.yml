@@ -1,4 +1,4 @@
-name: generate snake
+name: generate profile assets
 
 on:
   schedule:
@@ -24,6 +24,115 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
             dist/github-snake-light.svg?palette=github-light
+
+      - name: generate stats cards (self-hosted, no third-party service)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USER_LOGIN: ${{ github.repository_owner }}
+        run: |
+          mkdir -p dist
+          python3 << 'PYEOF'
+          import json, os, subprocess
+
+          login = os.environ["USER_LOGIN"]
+          query = """
+          query($login: String!) {
+            user(login: $login) {
+              followers { totalCount }
+              repositories(affiliations: OWNER, first: 100, isFork: false) {
+                totalCount
+                nodes {
+                  stargazerCount
+                  languages(first: 20) { edges { size node { name } } }
+                }
+              }
+              contributionsCollection {
+                totalCommitContributions
+                totalPullRequestContributions
+                totalIssueContributions
+                contributionCalendar { totalContributions }
+              }
+            }
+          }"""
+          r = subprocess.run(
+              ["gh", "api", "graphql", "-f", f"query={query}", "-f", f"login={login}"],
+              capture_output=True, text=True)
+          if r.returncode != 0:
+              raise SystemExit("GraphQL failed: " + r.stderr)
+          u = json.loads(r.stdout)["data"]["user"]
+          stars = sum(n["stargazerCount"] for n in u["repositories"]["nodes"])
+          repos = u["repositories"]["totalCount"]
+          followers = u["followers"]["totalCount"]
+          cc = u["contributionsCollection"]
+          stats = [
+              ("Total Stars", stars),
+              ("Total Commits (1y)", cc["totalCommitContributions"]),
+              ("Contributions (1y)", cc["contributionCalendar"]["totalContributions"]),
+              ("Total PRs", cc["totalPullRequestContributions"]),
+              ("Total Issues", cc["totalIssueContributions"]),
+              ("Followers", followers),
+              ("Repositories", repos),
+          ]
+          lang_bytes = {}
+          for n in u["repositories"]["nodes"]:
+              for e in n["languages"]["edges"]:
+                  lang_bytes[e["node"]["name"]] = lang_bytes.get(e["node"]["name"], 0) + e["size"]
+          top = sorted(lang_bytes.items(), key=lambda x: -x[1])[:8]
+          total_lb = sum(v for _, v in top) or 1
+
+          LANG_COLORS = {
+              "TypeScript": "#3178c6", "JavaScript": "#f1e05a", "C#": "#178600",
+              "C++": "#f34b7d", "C": "#555555", "Rust": "#dea584", "Python": "#3572A5",
+              "Vue": "#41b883", "HTML": "#e34c26", "CSS": "#563d7c", "Shell": "#89e051",
+              "PowerShell": "#012456", "Go": "#00ADD8", "Java": "#b07219", "Lua": "#000080",
+              "Jupyter Notebook": "#DA5B0B", "Vim script": "#199f4b", "MDX": "#fcb32c",
+              "Makefile": "#427819", "Dockerfile": "#384d54",
+          }
+
+          def esc(s):
+              return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+          def card(bg, stroke, title_c, label_c, value_c, bar_track):
+              t = esc(login) + " · GitHub Stats"
+              p = [f'<svg width="495" height="222" viewBox="0 0 495 222" xmlns="http://www.w3.org/2000/svg" role="img">',
+                   f'<rect x="0.5" y="0.5" width="494" height="221" rx="4.5" fill="{bg}" stroke="{stroke}"/>',
+                   f'<text x="25" y="38" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="20" font-weight="600" fill="{title_c}">{t}</text>']
+              y = 72
+              for i, (k, v) in enumerate(stats):
+                  col, row = divmod(i, 4)
+                  x = 35 + col * 240
+                  yy = y + row * 33
+                  p.append(f'<text x="{x}" y="{yy}" font-size="14" fill="{label_c}">{esc(k)}</text>')
+                  p.append(f'<text x="{x+210}" y="{yy}" text-anchor="end" font-size="14" font-weight="600" fill="{value_c}">{v:,}</text>')
+              p.append("</svg>")
+              return "\n".join(p)
+
+          def langcard(bg, stroke, title_c, label_c, value_c, track):
+              p = [f'<svg width="495" height="222" viewBox="0 0 495 222" xmlns="http://www.w3.org/2000/svg" role="img">',
+                   f'<rect x="0.5" y="0.5" width="494" height="221" rx="4.5" fill="{bg}" stroke="{stroke}"/>',
+                   f'<text x="25" y="38" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="20" font-weight="600" fill="{title_c}">Top Languages</text>',
+                   f'<text x="470" y="38" text-anchor="end" font-size="12" fill="{label_c}">by bytes of code</text>']
+              for i, (name, size) in enumerate(top):
+                  col, row = divmod(i, 4)
+                  x = 25 + col * 240
+                  yy = 62 + row * 40
+                  pct = size / total_lb * 100
+                  color = LANG_COLORS.get(name, "#8b949e")
+                  bw = (size / top[0][1]) * 200
+                  p.append(f'<text x="{x}" y="{yy}" font-size="13" font-weight="600" fill="{label_c}">{esc(name)}</text>')
+                  p.append(f'<text x="{x+210}" y="{yy}" text-anchor="end" font-size="12" fill="{value_c}">{pct:.1f}%</text>')
+                  p.append(f'<rect x="{x}" y="{yy+6}" width="210" height="8" rx="4" fill="{track}"/>')
+                  p.append(f'<rect x="{x}" y="{yy+6}" width="{bw:.1f}" height="8" rx="4" fill="{color}"/>')
+              p.append("</svg>")
+              return "\n".join(p)
+
+          open("dist/stats-dark.svg", "w").write(card("#1a1b27", "#70a5fd", "#70a5fd", "#a9b1d6", "#e0af68", "#2a2e42"))
+          open("dist/stats-light.svg", "w").write(card("#fefefe", "#e4e2e2", "#0969da", "#57606a", "#24292f", "#e7e7e7"))
+          open("dist/langs-dark.svg", "w").write(langcard("#1a1b27", "#70a5fd", "#70a5fd", "#a9b1d6", "#c0caf5", "#2a2e42"))
+          open("dist/langs-light.svg", "w").write(langcard("#fefefe", "#e4e2e2", "#0969da", "#57606a", "#24292f", "#e7e7e7"))
+          print("stats cards written:", stats, "| top langs:", [n for n, _ in top])
+          PYEOF
 
       - name: push to the output branch
         uses: crazy-max/ghaction-github-pages@v4
