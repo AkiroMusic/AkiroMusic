@@ -40,13 +40,6 @@ jobs:
           query($login: String!) {
             user(login: $login) {
               followers { totalCount }
-              repositories(affiliations: OWNER, first: 100, isFork: false) {
-                totalCount
-                nodes {
-                  stargazerCount
-                  languages(first: 20) { edges { size node { name } } }
-                }
-              }
               contributionsCollection {
                 totalCommitContributions
                 totalPullRequestContributions
@@ -61,8 +54,17 @@ jobs:
           if r.returncode != 0:
               raise SystemExit("GraphQL failed: " + r.stderr)
           u = json.loads(r.stdout)["data"]["user"]
-          stars = sum(n["stargazerCount"] for n in u["repositories"]["nodes"])
-          repos = u["repositories"]["totalCount"]
+          # repo/star/language data via the public REST endpoint: the workflow's
+          # GITHUB_TOKEN is repo-scoped and cannot see the owner's other repos
+          # through the GraphQL user.repositories connection.
+          rp = subprocess.run(
+              ["gh", "api", "--paginate", f"users/{login}/repos?per_page=100"],
+              capture_output=True, text=True)
+          if rp.returncode != 0:
+              raise SystemExit("REST repos failed: " + rp.stderr)
+          repos_list = [x for x in json.loads(rp.stdout) if not x.get("fork")]
+          stars = sum(x["stargazers_count"] for x in repos_list)
+          repos = len(repos_list)
           followers = u["followers"]["totalCount"]
           cc = u["contributionsCollection"]
           stats = [
@@ -75,9 +77,13 @@ jobs:
               ("Repositories", repos),
           ]
           lang_bytes = {}
-          for n in u["repositories"]["nodes"]:
-              for e in n["languages"]["edges"]:
-                  lang_bytes[e["node"]["name"]] = lang_bytes.get(e["node"]["name"], 0) + e["size"]
+          for x in repos_list:
+              lr = subprocess.run(["gh", "api", f"repos/{x['full_name']}/languages"],
+                                  capture_output=True, text=True)
+              if lr.returncode != 0:
+                  continue
+              for lang, size in json.loads(lr.stdout).items():
+                  lang_bytes[lang] = lang_bytes.get(lang, 0) + size
           top = sorted(lang_bytes.items(), key=lambda x: -x[1])[:8]
           total_lb = sum(v for _, v in top) or 1
 
