@@ -77,3 +77,44 @@
 - 📧 [akiromusic@qq.com](mailto:akiromusic@qq.com) · [akiromusic33@gmail.com](mailto:akiromusic33@gmail.com) · [akiro@trackformstudio.com](mailto:akiro@trackformstudio.com)
 - 💬 WeChat `AkiroMusic` · QQ `1284969540` · [Discord](https://discord.com/users/743371092609204294)
 - 🌐 [akiromusic.com](https://akiromusic.com)
+
+---
+
+## 🎧 关于我
+
+- 🎛️ **EDM 制作人**：擅长各种风格的 House 音乐——Pop House · Deep / Progressive House · Chill House · Organic House
+- 💻 **软件工程师**：打造精致的音频与效率类桌面工具（Electron · Tauri · WPF · Rust）
+- 🎓 **学术管理负责人 @ [Trackform](https://akiromusic.com)**：一家位于中国的电子音乐教育机构
+- 🔬 **音乐科技研究者**：探索神经潜在空间上的“有机”运算，用于 AI 辅助声音设计（[botanica-os](https://github.com/AkiroMusic/botanica-os)）
+
+## 💿 专辑作品
+
+- **Memories in Motion**（Soul Notes Records）· [▶ 网易云](https://music.163.com/album?id=355750612)
+- **Nothing but You and Me**（Hilarity Leap Records）· [▶ 网易云](https://music.163.com/album?id=354565990)
+- **Progressive Therapy**（Neongazer）· [▶ 网易云](https://music.163.com/#/album?id=380727044)
+
+**其他收听平台** — [Spotify](https://open.spotify.com/user/317elrvvnhorz6qfhn4math5o4h4) · [QQ 音乐](https://y.qq.com/n/ryqq/singer/003qWlyY39YXFo) · [SoundCloud](https://soundcloud.com/akirowww) · [YouTube](https://www.youtube.com/@AkiroMusic) · [BiliBili](https://space.bilibili.com/412877576)
+
+## 🛠️ 精选项目
+
+| | 项目 | 简介 |
+|:---:|---|---|
+| 🎚️ | **[AkiFX](https://github.com/AkiroMusic/AkiFX)** | 免费开源的 VST3/CLAP 效果器机架——11 个模块串成一链（Rust） |
+| 🔄 | **[AkiConvert](https://github.com/AkiroMusic/AkiConvert)** | 跨平台音频转换器：解密 NCM/KWM/KGM/QMC 并转为 MP3/FLAC——100% 离线 |
+| 🎛️ | **[AkiMix](https://github.com/AkiroMusic/AkiMix)** | 19 合 1 混音计算器：BPM、EQ、混响、延迟、响度、和弦（Electron + React） |
+| 🖍️ | **[AkiMark](https://github.com/AkiroMusic/AkiMark)** | 轻量级屏幕标注工具，支持全局快捷键（Tauri v2 + Vue 3） |
+| 🔊 | **[AkiLink](https://github.com/AkiroMusic/AkiLink)** | 把任意 Windows 电脑变成蓝牙音频接收器（WPF + WinRT） |
+| 🖥️ | **[AkiSpace](https://github.com/AkiroMusic/AkiSpace)** | 通过多会话 RDP，获得第二个独立的 Windows 桌面 |
+| 🧪 | **[botanica-os](https://github.com/AkiroMusic/botanica-os)** | AI 辅助 Botanica / IDM 音色设计的开放资料 |
+
+➡️ **[查看全部仓库](https://github.com/AkiroMusic?tab=repositories)**
+
+## ⚙️ 技术栈
+
+技术栈徽章见上方（英文版）。
+
+## 📮 联系方式
+
+- 📧 [akiromusic@qq.com](mailto:akiromusic@qq.com) · [akiromusic33@gmail.com](mailto:akiromusic33@gmail.com) · [akiro@trackformstudio.com](mailto:akiro@trackformstudio.com)
+- 💬 微信 `AkiroMusic` · QQ `1284969540` · [Discord](https://discord.com/users/743371092609204294)
+- 🌐 [akiromusic.com](https://akiromusic.com)
