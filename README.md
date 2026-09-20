@@ -70,6 +70,12 @@
 
 <img height="180" src="https://streak-stats.demolab.com?user=AkiroMusic&hide_border=true&theme=tokyonight&locale=en" alt="GitHub streak"/>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/github-snake-light.svg" />
+  <img alt="AkiroMusic contribution snake animation" width="100%" src="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/github-snake.svg" />
+</picture>
+
 </div>
 
 ## 📮 Get in Touch
