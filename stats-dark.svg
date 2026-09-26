@@ -1,0 +1,18 @@
+<svg width="495" height="222" viewBox="0 0 495 222" xmlns="http://www.w3.org/2000/svg" role="img">
+<rect x="0.5" y="0.5" width="494" height="221" rx="4.5" fill="#1a1b27" stroke="#70a5fd"/>
+<text x="25" y="38" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="20" font-weight="600" fill="#70a5fd">AkiroMusic · GitHub Stats</text>
+<text x="35" y="72" font-size="14" fill="#a9b1d6">Total Stars</text>
+<text x="245" y="72" text-anchor="end" font-size="14" font-weight="600" fill="#e0af68">10</text>
+<text x="35" y="105" font-size="14" fill="#a9b1d6">Total Commits (1y)</text>
+<text x="245" y="105" text-anchor="end" font-size="14" font-weight="600" fill="#e0af68">333</text>
+<text x="35" y="138" font-size="14" fill="#a9b1d6">Contributions (1y)</text>
+<text x="245" y="138" text-anchor="end" font-size="14" font-weight="600" fill="#e0af68">363</text>
+<text x="35" y="171" font-size="14" fill="#a9b1d6">Total PRs</text>
+<text x="245" y="171" text-anchor="end" font-size="14" font-weight="600" fill="#e0af68">1</text>
+<text x="275" y="72" font-size="14" fill="#a9b1d6">Total Issues</text>
+<text x="485" y="72" text-anchor="end" font-size="14" font-weight="600" fill="#e0af68">1</text>
+<text x="275" y="105" font-size="14" fill="#a9b1d6">Followers</text>
+<text x="485" y="105" text-anchor="end" font-size="14" font-weight="600" fill="#e0af68">5</text>
+<text x="275" y="138" font-size="14" fill="#a9b1d6">Repositories</text>
+<text x="485" y="138" text-anchor="end" font-size="14" font-weight="600" fill="#e0af68">24</text>
+</svg>
