@@ -28,7 +28,7 @@
 - 🎛️ **EDM Producer** — House music in all its flavors: Pop House · Deep / Progressive House · Chill House · Organic House
 - 💻 **Software Engineer** — building polished desktop tools for audio and productivity (Electron · Tauri · WPF · Rust)
 - 🎓 **Academic Admin Head @ [Trackform](https://akiromusic.com)** — an electronic music education institution in China
-- 🔬 **Music-tech researcher** — exploring "organic" operations on neural latent spaces for AI-assisted sound design ([botanica-os](https://github.com/AkiroMusic/botanica-os))
+- 🔬 **Music-tech researcher** — exploring "organic" operations on neural latent spaces for AI-assisted sound design ([botanica-os](https://github.com/AkiroMusic/Botanica-OS))
 
 ## 💿 Discography
 
@@ -101,7 +101,7 @@
 - 🎛️ **EDM 制作人**：擅长各种风格的 House 音乐——Pop House · Deep / Progressive House · Chill House · Organic House
 - 💻 **软件工程师**：打造精致的音频与效率类桌面工具（Electron · Tauri · WPF · Rust）
 - 🎓 **学术管理负责人 @ [Trackform](https://akiromusic.com)**：一家位于中国的电子音乐教育机构
-- 🔬 **音乐科技研究者**：探索神经潜在空间上的“有机”运算，用于 AI 辅助声音设计（[botanica-os](https://github.com/AkiroMusic/botanica-os)）
+- 🔬 **音乐科技研究者**：探索神经潜在空间上的“有机”运算，用于 AI 辅助声音设计（[botanica-os](https://github.com/AkiroMusic/Botanica-OS)）
 
 ## 💿 专辑作品
 
