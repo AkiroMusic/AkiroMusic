@@ -45,13 +45,15 @@
 
 | | Project | What it is |
 |:---:|---|---|
-| 🎚️ | **[AkiFX](https://github.com/AkiroMusic/AkiFX)** | Free open-source VST3/CLAP effects rack — 11 modules in one chain (Rust) |
+| 🌀 | **[AkiTilt](https://github.com/AkiroMusic/AkiTilt)** | Formant & texture morph plugin for Botanica makers — VST3 / AU / Standalone (JUCE, C++) |
 | 🔄 | **[AkiConvert](https://github.com/AkiroMusic/AkiConvert)** | Cross-platform audio converter; decrypts NCM/KWM/KGM/QMC to MP3/FLAC — 100% offline |
+| 🎚️ | **[AkiFX](https://github.com/AkiroMusic/AkiFX)** | Free open-source VST3/CLAP effects rack — 11 modules in one chain (Rust) |
 | 🎛️ | **[AkiMix](https://github.com/AkiroMusic/AkiMix)** | 19-in-1 mixing calculator: BPM, EQ, reverb, delay, loudness, chords (Electron + React) |
 | 🖍️ | **[AkiMark](https://github.com/AkiroMusic/AkiMark)** | Lightweight on-screen annotation tool with a global hotkey (Tauri v2 + Vue 3) |
 | 🔊 | **[AkiLink](https://github.com/AkiroMusic/AkiLink)** | Turn any Windows PC into a Bluetooth audio receiver (WPF + WinRT) |
 | 🖥️ | **[AkiSpace](https://github.com/AkiroMusic/AkiSpace)** | A second independent Windows desktop via multi-session RDP |
-| 🧪 | **[botanica-os](https://github.com/AkiroMusic/botanica-os)** | Open materials for AI-assisted Botanica / IDM timbre design |
+| 🌱 | **[AkiBloom](https://github.com/AkiroMusic/AkiBloom)** | Timbre-growing instrument — graft, hybridize and cultivate samples into playable new sounds (Rust) |
+| 🧪 | **[Botanica-OS](https://github.com/AkiroMusic/Botanica-OS)** | Open materials for AI-assisted Botanica / IDM timbre design |
 
 ➡️ **[Browse all repositories](https://github.com/AkiroMusic?tab=repositories)**
 
@@ -113,13 +115,15 @@
 
 | | 项目 | 简介 |
 |:---:|---|---|
-| 🎚️ | **[AkiFX](https://github.com/AkiroMusic/AkiFX)** | 免费开源的 VST3/CLAP 效果器机架——11 个模块串成一链（Rust） |
+| 🌀 | **[AkiTilt](https://github.com/AkiroMusic/AkiTilt)** | 为 Botanica 制作人打造的共振峰与质感变形插件——VST3 / AU / 独立运行（JUCE, C++） |
 | 🔄 | **[AkiConvert](https://github.com/AkiroMusic/AkiConvert)** | 跨平台音频转换器：解密 NCM/KWM/KGM/QMC 并转为 MP3/FLAC——100% 离线 |
+| 🎚️ | **[AkiFX](https://github.com/AkiroMusic/AkiFX)** | 免费开源的 VST3/CLAP 效果器机架——11 个模块串成一链（Rust） |
 | 🎛️ | **[AkiMix](https://github.com/AkiroMusic/AkiMix)** | 19 合 1 混音计算器：BPM、EQ、混响、延迟、响度、和弦（Electron + React） |
 | 🖍️ | **[AkiMark](https://github.com/AkiroMusic/AkiMark)** | 轻量级屏幕标注工具，支持全局快捷键（Tauri v2 + Vue 3） |
 | 🔊 | **[AkiLink](https://github.com/AkiroMusic/AkiLink)** | 把任意 Windows 电脑变成蓝牙音频接收器（WPF + WinRT） |
 | 🖥️ | **[AkiSpace](https://github.com/AkiroMusic/AkiSpace)** | 通过多会话 RDP，获得第二个独立的 Windows 桌面 |
-| 🧪 | **[botanica-os](https://github.com/AkiroMusic/botanica-os)** | AI 辅助 Botanica / IDM 音色设计的开放资料 |
+| 🌱 | **[AkiBloom](https://github.com/AkiroMusic/AkiBloom)** | 音色生长乐器——把采样嫁接、杂交、培育成可演奏的新音色（Rust） |
+| 🧪 | **[Botanica-OS](https://github.com/AkiroMusic/Botanica-OS)** | AI 辅助 Botanica / IDM 音色设计的开放资料 |
 
 ➡️ **[查看全部仓库](https://github.com/AkiroMusic?tab=repositories)**
 
