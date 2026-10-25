@@ -162,8 +162,7 @@ jobs:
                   p.append(f'<text x="230" y="{yy}" font-size="13" fill="{value_c}">{esc(tag)}</text>')
                   p.append(f'<text x="470" y="{yy}" text-anchor="end" font-size="13" fill="{label_c}">{date}</text>')
               p.append("</svg>")
-              return "
-".join(p)
+              return "\n".join(p)
 
           open("dist/releases-dark.svg", "w").write(radar("#1a1b27", "#70a5fd", "#70a5fd", "#a9b1d6", "#e0af68"))
           open("dist/releases-light.svg", "w").write(radar("#fefefe", "#e4e2e2", "#0969da", "#57606a", "#24292f"))
