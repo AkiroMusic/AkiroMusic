@@ -8,7 +8,7 @@
 
 **Software Engineer** · **EDM Producer** · Academic Admin Head @ **Trackform**
 
-*Creating Musical Moments* 🎧
+<img src="https://readme-typing-svg.demolab.com?font=Segoe+UI&weight=600&size=26&pause=1400&color=70A5FD&center=true&vCenter=true&width=720&height=60&lines=%F0%9F%8E%A7%20Creating%20Musical%20Moments;House%20Producer%20%C2%B7%20Plugin%20Developer;%F0%9F%8C%B1%20Growing%20timbres%20from%20samples;%F0%9F%8E%B5%20%E7%94%A8%E4%BB%A3%E7%A0%81%E4%B8%8E%E5%A3%B0%E9%9F%B3%EF%BC%8C%E5%88%9B%E9%80%A0%E9%9F%B3%E4%B9%90%E6%97%B6%E5%88%BB" alt="Creating Musical Moments"/>
 
 [![Website](https://img.shields.io/badge/Website-akiromusic.com-8B5CF6?style=flat-square&logo=googlechrome&logoColor=white)](https://akiromusic.com)
 [![Spotify](https://img.shields.io/badge/Spotify-AkiroMusic-1DB954?style=flat-square&logo=spotify&logoColor=white)](https://open.spotify.com/user/317elrvvnhorz6qfhn4math5o4h4)
@@ -52,6 +52,7 @@
 | 🖍️ | **[AkiMark](https://github.com/AkiroMusic/AkiMark)** | Lightweight on-screen annotation tool with a global hotkey (Tauri v2 + Vue 3) |
 | 🔊 | **[AkiLink](https://github.com/AkiroMusic/AkiLink)** | Turn any Windows PC into a Bluetooth audio receiver (WPF + WinRT) |
 | 🖥️ | **[AkiSpace](https://github.com/AkiroMusic/AkiSpace)** | A second independent Windows desktop via multi-session RDP |
+| 🛡️ | **[Bilibili At Guard](https://github.com/AkiroMusic/bilibili-at-guard)** | Chrome/Edge extension that hides @-mention comment spam on bilibili — restore, whitelist or block from a side panel |
 | 🌱 | **[AkiBloom](https://github.com/AkiroMusic/AkiBloom)** | Timbre-growing instrument — graft, hybridize and cultivate samples into playable new sounds (Rust) |
 | 🧪 | **[Botanica-OS](https://github.com/AkiroMusic/Botanica-OS)** | Open materials for AI-assisted Botanica / IDM timbre design |
 
@@ -81,6 +82,18 @@
 <img height="180" src="https://streak-stats.demolab.com?user=AkiroMusic&hide_border=true&theme=tokyonight&locale=en" alt="GitHub streak"/>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/releases-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/releases-light.svg" />
+  <img alt="Latest releases across my repos" height="148" src="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/releases-light.svg" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/github-3d-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/github-3d-light.svg" />
+  <img alt="3D contribution graph" width="100%" src="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/github-3d-light.svg" />
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/github-snake-light.svg" />
   <img alt="AkiroMusic contribution snake animation" width="100%" src="https://raw.githubusercontent.com/AkiroMusic/AkiroMusic/output/github-snake.svg" />
@@ -93,6 +106,7 @@
 - 📧 [akiromusic@qq.com](mailto:akiromusic@qq.com) · [akiromusic33@gmail.com](mailto:akiromusic33@gmail.com) · [akiro@trackformstudio.com](mailto:akiro@trackformstudio.com)
 - 💬 WeChat `AkiroMusic` · QQ `1284969540` · [Discord](https://discord.com/users/743371092609204294)
 - 🌐 [akiromusic.com](https://akiromusic.com)
+- 📈 ![Profile views](https://komarev.com/ghpvc/?username=AkiroMusic&style=flat-square&color=70a5fd&label=PROFILE+VIEWS)
 
 ---
 
@@ -122,6 +136,7 @@
 | 🖍️ | **[AkiMark](https://github.com/AkiroMusic/AkiMark)** | 轻量级屏幕标注工具，支持全局快捷键（Tauri v2 + Vue 3） |
 | 🔊 | **[AkiLink](https://github.com/AkiroMusic/AkiLink)** | 把任意 Windows 电脑变成蓝牙音频接收器（WPF + WinRT） |
 | 🖥️ | **[AkiSpace](https://github.com/AkiroMusic/AkiSpace)** | 通过多会话 RDP，获得第二个独立的 Windows 桌面 |
+| 🛡️ | **[Bilibili At Guard](https://github.com/AkiroMusic/bilibili-at-guard)** | Chrome/Edge 扩展：隐藏 B 站 @ 我的评论，侧边栏统一管理——恢复、白名单、删除（UP 主）或拉黑 |
 | 🌱 | **[AkiBloom](https://github.com/AkiroMusic/AkiBloom)** | 音色生长乐器——把采样嫁接、杂交、培育成可演奏的新音色（Rust） |
 | 🧪 | **[Botanica-OS](https://github.com/AkiroMusic/Botanica-OS)** | AI 辅助 Botanica / IDM 音色设计的开放资料 |
 
