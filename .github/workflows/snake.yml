@@ -138,7 +138,48 @@ jobs:
           open("dist/langs-dark.svg", "w").write(langcard("#1a1b27", "#70a5fd", "#70a5fd", "#a9b1d6", "#c0caf5", "#2a2e42"))
           open("dist/langs-light.svg", "w").write(langcard("#fefefe", "#e4e2e2", "#0969da", "#57606a", "#24292f", "#e7e7e7"))
           print("stats cards written:", stats, "| top langs:", [n for n, _ in top])
+
+          releases = []
+          for x in repos_list:
+              rr = subprocess.run(["gh", "api", f"repos/{x['full_name']}/releases/latest"],
+                                  capture_output=True, text=True)
+              if rr.returncode == 0:
+                  rel = json.loads(rr.stdout)
+                  releases.append((x["name"], rel["tag_name"], rel["published_at"][:10]))
+          releases.sort(key=lambda r: r[2], reverse=True)
+          top_rel = releases[:3]
+
+          def radar(bg, stroke, title_c, label_c, value_c):
+              p = ['<svg width="495" height="148" viewBox="0 0 495 148" xmlns="http://www.w3.org/2000/svg" role="img">',
+                   f'<rect x="0.5" y="0.5" width="494" height="147" rx="4.5" fill="{bg}" stroke="{stroke}"/>',
+                   f'<text x="25" y="36" font-family="Segoe UI,Ubuntu,Sans-Serif" font-size="20" font-weight="600" fill="{title_c}">Latest Releases</text>']
+              if not top_rel:
+                  p.append(f'<text x="25" y="72" font-size="14" fill="{label_c}">No releases yet</text>')
+              for i, (name, tag, date) in enumerate(top_rel):
+                  yy = 66 + i * 30
+                  disp = name if len(name) <= 24 else name[:23] + "…"
+                  p.append(f'<text x="25" y="{yy}" font-size="14" font-weight="600" fill="{label_c}">{esc(disp)}</text>')
+                  p.append(f'<text x="230" y="{yy}" font-size="13" fill="{value_c}">{esc(tag)}</text>')
+                  p.append(f'<text x="470" y="{yy}" text-anchor="end" font-size="13" fill="{label_c}">{date}</text>')
+              p.append("</svg>")
+              return "
+".join(p)
+
+          open("dist/releases-dark.svg", "w").write(radar("#1a1b27", "#70a5fd", "#70a5fd", "#a9b1d6", "#e0af68"))
+          open("dist/releases-light.svg", "w").write(radar("#fefefe", "#e4e2e2", "#0969da", "#57606a", "#24292f"))
+          print("release radar:", top_rel)
           PYEOF
+
+      - name: generate 3D contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: collect 3D SVGs
+        run: |
+          cp profile-3d-contrib/profile-season.svg dist/github-3d-light.svg
+          cp profile-3d-contrib/profile-night-green.svg dist/github-3d-dark.svg
 
       - name: push to the output branch
         uses: crazy-max/ghaction-github-pages@v4
