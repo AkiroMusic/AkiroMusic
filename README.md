@@ -52,7 +52,7 @@
 | 🖍️ | **[AkiMark](https://github.com/AkiroMusic/AkiMark)** | Lightweight on-screen annotation tool with a global hotkey (Tauri v2 + Vue 3) |
 | 🔊 | **[AkiLink](https://github.com/AkiroMusic/AkiLink)** | Turn any Windows PC into a Bluetooth audio receiver (WPF + WinRT) |
 | 🖥️ | **[AkiSpace](https://github.com/AkiroMusic/AkiSpace)** | A second independent Windows desktop via multi-session RDP |
-| 🛡️ | **[Bilibili At Guard](https://github.com/AkiroMusic/bilibili-at-guard)** | Chrome/Edge extension that hides @-mention comment spam on bilibili — restore, whitelist or block from a side panel |
+| 🛡️ | **[Bilibili At Guard](https://github.com/AkiroMusic/Bilibili-At-Guard)** | Chrome/Edge extension that hides @-mention comment spam on bilibili — restore, whitelist or block from a side panel |
 | 🌱 | **[AkiBloom](https://github.com/AkiroMusic/AkiBloom)** | Timbre-growing instrument — graft, hybridize and cultivate samples into playable new sounds (Rust) |
 | 🧪 | **[Botanica-OS](https://github.com/AkiroMusic/Botanica-OS)** | Open materials for AI-assisted Botanica / IDM timbre design |
 
@@ -136,7 +136,7 @@
 | 🖍️ | **[AkiMark](https://github.com/AkiroMusic/AkiMark)** | 轻量级屏幕标注工具，支持全局快捷键（Tauri v2 + Vue 3） |
 | 🔊 | **[AkiLink](https://github.com/AkiroMusic/AkiLink)** | 把任意 Windows 电脑变成蓝牙音频接收器（WPF + WinRT） |
 | 🖥️ | **[AkiSpace](https://github.com/AkiroMusic/AkiSpace)** | 通过多会话 RDP，获得第二个独立的 Windows 桌面 |
-| 🛡️ | **[Bilibili At Guard](https://github.com/AkiroMusic/bilibili-at-guard)** | Chrome/Edge 扩展：隐藏 B 站 @ 我的评论，侧边栏统一管理——恢复、白名单、删除（UP 主）或拉黑 |
+| 🛡️ | **[Bilibili At Guard](https://github.com/AkiroMusic/Bilibili-At-Guard)** | Chrome/Edge 扩展：隐藏 B 站 @ 我的评论，侧边栏统一管理——恢复、白名单、删除（UP 主）或拉黑 |
 | 🌱 | **[AkiBloom](https://github.com/AkiroMusic/AkiBloom)** | 音色生长乐器——把采样嫁接、杂交、培育成可演奏的新音色（Rust） |
 | 🧪 | **[Botanica-OS](https://github.com/AkiroMusic/Botanica-OS)** | AI 辅助 Botanica / IDM 音色设计的开放资料 |
 
