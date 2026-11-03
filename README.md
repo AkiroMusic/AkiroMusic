@@ -56,6 +56,8 @@
 | 🌱 | **[AkiBloom](https://github.com/AkiroMusic/AkiBloom)** | Timbre-growing instrument — graft, hybridize and cultivate samples into playable new sounds (Rust) |
 | 🧪 | **[Botanica-OS](https://github.com/AkiroMusic/Botanica-OS)** | Open materials for AI-assisted Botanica / IDM timbre design |
 
+🌐 **[Project site directory](https://akiromusic.github.io/AkiroMusic/)** — every featured project has its own site on the Aurora Glass design system.
+
 ➡️ **[Browse all repositories](https://github.com/AkiroMusic?tab=repositories)**
 
 ## ⚙️ Tech Stack
@@ -139,6 +141,8 @@
 | 🛡️ | **[Bilibili At Guard](https://github.com/AkiroMusic/Bilibili-At-Guard)** | Chrome/Edge 扩展：隐藏 B 站 @ 我的评论，侧边栏统一管理——恢复、白名单、删除（UP 主）或拉黑 |
 | 🌱 | **[AkiBloom](https://github.com/AkiroMusic/AkiBloom)** | 音色生长乐器——把采样嫁接、杂交、培育成可演奏的新音色（Rust） |
 | 🧪 | **[Botanica-OS](https://github.com/AkiroMusic/Botanica-OS)** | AI 辅助 Botanica / IDM 音色设计的开放资料 |
+
+🌐 **[项目站点目录](https://akiromusic.github.io/AkiroMusic/)**——每个重点项目都有基于 Aurora Glass 设计系统的独立站点。
 
 ➡️ **[查看全部仓库](https://github.com/AkiroMusic?tab=repositories)**
 
